@@ -43,7 +43,7 @@
             <div class="container mt-5 " >
                 <div class="row">
                     <div class="col-6">
-                        <form class="row g-3 needs-validation" novalidate>
+                        <form class="row g-3 needs-validation" id="frmDatos" novalidate>
                             <h2>Formulario</h2>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
@@ -52,27 +52,27 @@
                                 <div class="invalid-feedback">Complete los datos</div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduce tu correo" required>
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email"  placeholder="Introduce tu correo" required>
                                 <div class="valid-feedback">Campo Ok</div>
                                 <div class="invalid-feedback">Complete los datos</div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Introduce el mensaje" required></textarea>
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="3" placeholder="Introduce el mensaje" required></textarea>
                                 <div class="valid-feedback">Campo Ok</div>
                                 <div class="invalid-feedback">Complete los datos</div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary" onclick="guardarDatos()" >Enviar</button>
                         </form>
                     </div>
                     <div class="col-6">
                         <h2 >Resumen</h2>
                         <div class="card" style="width: 18rem;">
                             <ul class="list-group list-group-flush mt-2">
-                              <li class="list-group-item">Nombre:</li>
-                              <li class="list-group-item">Correo:</li>
-                              <li class="list-group-item">Mensaje:</li>
+                              <li class="list-group-item"><p id="resumenNombre"></p></li>
+                              <li class="list-group-item"><p id="resumenCorreo"></p></li>
+                              <li class="list-group-item"><p id="resumenMensaje"></p></li>
                             </ul>
                             
                           </div>
